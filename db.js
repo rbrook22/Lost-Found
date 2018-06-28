@@ -36,9 +36,9 @@ function searchByTitle(searchString) {
     return db.any("select * from foundformdata where title ilike '%$1#%'", [searchString]);
 }
 
-searchByTitle('00000')
-    .then((data) => { console.log(data); })
-    .catch((error) => { console.log(error); });
+// searchByTitle('wallet')
+//     .then((data) => { console.log(data); })
+//     .catch((error) => { console.log(error); });
 
 
 
