@@ -16,5 +16,8 @@
   "bugs": {
     "url": "https://github.com/rbrook22/Lost-Found/issues"
   },
-  "homepage": "https://github.com/rbrook22/Lost-Found#readme"
+  "homepage": "https://github.com/rbrook22/Lost-Found#readme",
+  "dependencies": {
+    "pg-promise": "^8.4.4"
+  }
 }
