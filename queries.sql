@@ -7,7 +7,7 @@ Select * from foundformdata where userid = 2;
 -- Get item by title with keyword wallet
 select * from foundformdata where title ilike '%wallet%';
 
--- get item by title, should have 9 results
+-- get item by title, should have 0 results
 Select * from foundformdata where title ilike '%00000%';
 
 -- Deletes a row/particular item

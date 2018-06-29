@@ -40,11 +40,18 @@ function searchByTitle(searchString) {
 //     .then((data) => { console.log(data); })
 //     .catch((error) => { console.log(error); });
 
+function deleteById(userid) {
+    return db.oneOrNone('delete from foundFormData where userid=$1', [userid]);
+}
 
+    // deleteById(4)
+    //     .then((data) => {console.log(data); })
+    //     .catch((error) => {console.log(error); });
 
     module.exports = {
         getAll, 
         getOne,
-        searchByTitle
+        searchByTitle,
+        deleteById
 
     };
