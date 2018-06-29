@@ -1,5 +1,5 @@
 CREATE TABLE foundFormData (
-    Userid serial primary key,
+    itemId serial primary key,
     Title varchar(300),
     ItemDescription text, 
     DateFound varchar(300),
