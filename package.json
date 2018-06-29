@@ -18,6 +18,7 @@
   },
   "homepage": "https://github.com/rbrook22/Lost-Found#readme",
   "dependencies": {
+    "express": "^4.16.3",
     "pg-promise": "^8.4.4"
   }
 }
