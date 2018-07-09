@@ -22,7 +22,7 @@ app.get('/foundItem', (req, res, next) => {
     .catch((error) => { console.log(error); });
 });
 app.post('/foundItem', (req,res) => {
-    res.send("I heard ya bitch");
+    // res.send("I heard ya bitch");
     console.log(req.body);
     console.log(req.body.title);
     console.log(req.body.description);
@@ -32,7 +32,9 @@ app.post('/foundItem', (req,res) => {
     console.log(req.body.email);
 
     foundItem.addItem(req.body.title, req.body.description, req.body.date, req.body.time, req.body.location, req.body.email)
-    
+    .then((data) => {
+        res.redirect('/foundItem');
+    })
 })
 
 

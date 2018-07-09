@@ -1,0 +1,27 @@
+html, body {
+    height: 100%;
+    width: 100%;
+    margin: 0;
+    padding: 0;
+}
+.main, .vidContainer{
+    height: 100%;
+    width: 100%;
+    overflow: hidden;
+    position: relative;
+    text-align: center;
+}   
+video {
+    position: absolute;
+    top: 0;
+    bottom: 0;
+    left: 0;
+    right: 0;
+    z-index: -1;
+}
+.homePageButton {
+    height: 70px;
+    width: 90px;
+    font-size: 20px;
+    cursor: pointer;
+}
