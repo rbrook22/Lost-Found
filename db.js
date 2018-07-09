@@ -64,7 +64,7 @@ function updateById(title, itemdescription, datefound, timefound, locationfound,
     //     .then((data) => {console.log(data); })
     //     .catch((error) => {console.log(error); });
 
-    function addItem(title, itemdescription, datefound, timefound, locationfound, imageurl, email) {
+    function addItem(title, itemdescription, datefound, timefound, locationfound, email, imageurl=" ") {
         return db.one(`INSERT INTO foundFormData
         (title, itemdescription, datefound, timefound, locationfound, imageurl, email)
     VALUES 
