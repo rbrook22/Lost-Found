@@ -4,6 +4,7 @@ html, body {
     margin: 0;
     padding: 0;
 }
+/* Homepage Styling */
 .main, .vidContainer{
     height: 100%;
     width: 100%;
@@ -45,3 +46,14 @@ video {
     color: red;
     border-color: red;
 }
+
+/* Founditem Styling */
+.lineBreak {
+    border-bottom: solid 2px rgba(0, 0, 0, 0.2);
+    width:90%;
+    height: 5%;
+}
+
+/* Editpage Styling */
+
+/* Deletepage styling */
