@@ -48,7 +48,7 @@ function deleteById(itemid) {
     //     .then((data) => {console.log(data); })
     //     .catch((error) => {console.log(error); });
 
-function updateById(title, itemdescription, datefound, timefound, locationfound, imageurl, email, itemid) {
+function updateById(title, itemdescription, datefound, timefound, locationfound, email, itemid, imageurl=" ") {
     return db.result(`update foundformdata
     set title='$1#',  
         itemdescription='$2#', 
@@ -57,7 +57,7 @@ function updateById(title, itemdescription, datefound, timefound, locationfound,
         locationfound='$5#',
         imageurl='$6#',
         email='$7#'
-    Where itemid=$8`, [title, itemdescription, datefound, timefound, locationfound, imageurl, email, itemid]);
+    Where itemid=$8`, [title, itemdescription, datefound, timefound, locationfound, email, itemid, imageurl=" "]);
 }
 
     // updateById('Iphone X', 'Iphone X 256gb Silver', '06/21/2018', '1:30 pm', '3323 Piedmont Rd NE, Atlanta, GA, 30324', 'atvPhone.com', 'atvtech@gmail.com', 1)

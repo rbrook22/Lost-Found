@@ -22,7 +22,7 @@ app.get('/foundItem', (req, res, next) => {
     .catch((error) => { console.log(error); });
 });
 app.post('/foundItem', (req,res) => {
-    // res.send("I heard ya bitch");
+    // res.send("You submitted the form");
     console.log(req.body);
     console.log(req.body.title);
     console.log(req.body.description);
@@ -37,6 +37,27 @@ app.post('/foundItem', (req,res) => {
     })
 })
 
+app.get('/:itemid/editpage', (req, res) => {
+    foundItem.getOne(req.params.itemid)
+    .then((data) => {
+        // res.send(data);
+        res.render('editpage', data)
+    });
+})
+app.post('/:itemid/editpage', (req, res) => {
+    res.send('You updated the entry!');
+    console.log(req.body);
+    console.log(req.body.title);
+    console.log(req.body.description);
+    console.log(req.body.date);
+    console.log(req.body.time);
+    console.log(req.body.location);
+    console.log(req.body.email);
+    // foundItem.updateById(req.params.itemid)
+    // .then((data) => {
+    //     res.redirect('/foundItem')
+    // })
+})
 
 app.listen(3000, () => {
     console.log('your server is running!');
