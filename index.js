@@ -40,12 +40,13 @@ app.post('/foundItem', (req,res) => {
 app.get('/:itemid/editpage', (req, res) => {
     foundItem.getOne(req.params.itemid)
     .then((data) => {
+        console.log(data);
         // res.send(data);
         res.render('editpage', data)
-    });
-})
+    })
+});
+
 app.post('/:itemid/editpage', (req, res) => {
-    res.send('You updated the entry!');
     console.log(req.body);
     console.log(req.body.title);
     console.log(req.body.description);
@@ -53,10 +54,19 @@ app.post('/:itemid/editpage', (req, res) => {
     console.log(req.body.time);
     console.log(req.body.location);
     console.log(req.body.email);
-    // foundItem.updateById(req.params.itemid)
-    // .then((data) => {
-    //     res.redirect('/foundItem')
-    // })
+    
+    foundItem.updateById(
+         req.body.title,
+          req.body.description,
+           req.body.date,
+            req.body.time,
+            req.body.location,
+             req.body.email,
+             req.params.itemid)
+    .then((data) => {
+        console.log(data);
+        res.redirect('/foundItem');
+    })
 })
 
 app.listen(3000, () => {

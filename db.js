@@ -9,7 +9,7 @@ const cn = {
 const db = pgp(cn);
 
 function getAll() {
-    return db.any('Select * from foundformdata');
+    return db.any('Select * from foundformdata order by itemid');
 }
 
 // getAll()
@@ -55,9 +55,9 @@ function updateById(title, itemdescription, datefound, timefound, locationfound,
         datefound='$3#',
         timefound='$4#', 
         locationfound='$5#',
-        imageurl='$6#',
-        email='$7#'
-    Where itemid=$8`, [title, itemdescription, datefound, timefound, locationfound, email, itemid, imageurl=" "]);
+        imageurl='$8#',
+        email='$6#'
+    Where itemid=$7`, [title, itemdescription, datefound, timefound, locationfound, email, itemid, imageurl]);
 }
 
     // updateById('Iphone X', 'Iphone X 256gb Silver', '06/21/2018', '1:30 pm', '3323 Piedmont Rd NE, Atlanta, GA, 30324', 'atvPhone.com', 'atvtech@gmail.com', 1)
