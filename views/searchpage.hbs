@@ -1,0 +1,14 @@
+<h1 class="searchTitle">Your Results!</h1>
+<div class="searchForm"></div>
+    {{#each items}}
+    <form action="/{{title}}/searchpage" method="POST">
+        <input type="text" name="title" value="{{title}}">
+        <input type="text" name="description" value="{{itemdescription}}">
+        <input type="date" name="date" id="" value="{{datefound}}">
+        <input type="time" name="time" id="" value="{{timefound}}">
+        <input type="text" name="location" id="" value="{{locationfound}}">
+        <input type="email" name="email" id="" value="{{email}}">
+        <a href="/{{itemid}}/editpage"><input type="button" name="edit" value="Edit"></a>
+    </form>
+    {{/each}}
+</div>

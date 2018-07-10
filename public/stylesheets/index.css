@@ -6,7 +6,7 @@ html, body {
     font-family: 'Josefin Sans', sans-serif;
 }
 /* Navbar Styling */
-.navbar {
+/* .nav {
     position: fixed;
     height: 100px;
     width: 100%;
@@ -16,11 +16,15 @@ html, body {
     box-sizing: border-box;
     background-color: pink;
 }
-.navItems {
-    list-style: none;
-    display: flex;
-    
+.navItemsContainer {
+    display: grid;
+    grid-template-columns: 90% 10%;
 }
+.navItems {
+    display: flex;
+    justify-content: space-evenly;
+    list-style: none;
+} */
 /* Homepage Styling */
 .mainTitle {
     font-size: 50px;
@@ -68,7 +72,9 @@ video {
 }
 
 /* Lostitem Styling */
-
+.searchForm {
+    border: 2px black solid;
+}
 
 /* Founditem Styling */
 
