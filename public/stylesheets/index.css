@@ -3,8 +3,29 @@ html, body {
     width: 100%;
     margin: 0;
     padding: 0;
+    font-family: 'Josefin Sans', sans-serif;
+}
+/* Navbar Styling */
+.navbar {
+    position: fixed;
+    height: 100px;
+    width: 100%;
+    top: 0;
+    left: 0;
+    padding: 10px 100px;
+    box-sizing: border-box;
+    background-color: pink;
+}
+.navItems {
+    list-style: none;
+    display: flex;
+    
 }
 /* Homepage Styling */
+.mainTitle {
+    font-size: 50px;
+    margin-bottom: 50px;
+}
 .main, .vidContainer{
     height: 100%;
     width: 100%;
@@ -26,33 +47,30 @@ video {
     z-index: -1;
 }
 .homePageButton {
-    height: 70px;
-    width: 200px;
+    height: 50px;
+    width: 150px;
     font-size: 20px;
+    border: 3px solid white;
     cursor: pointer;
     background-color: transparent;
-    border-color: white;
-    border-radius: 50%;
+    border-radius: 20px;
     color: white;
     margin-left: 20px;
     margin-right: 20px;
 }
 .foundButton:hover {
-    color: green;
-    border-color: green;
-    
+    border-color: rgb(69, 244, 66);
+    background-color: rgba(69, 244, 66, .4);
 }
 .lostButton:hover {
-    color: red;
-    border-color: red;
+    border-color: rgb(244, 78, 66);
+    background-color: rgba(244, 78, 66, .4);
 }
 
+/* Lostitem Styling */
+
+
 /* Founditem Styling */
-.lineBreak {
-    border-bottom: solid 2px rgba(0, 0, 0, 0.2);
-    width:90%;
-    height: 5%;
-}
 
 /* Editpage Styling */
 
