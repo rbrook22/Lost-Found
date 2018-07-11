@@ -5,26 +5,6 @@ html, body {
     padding: 0;
     font-family: 'Josefin Sans', sans-serif;
 }
-/* Navbar Styling */
-/* .nav {
-    position: fixed;
-    height: 100px;
-    width: 100%;
-    top: 0;
-    left: 0;
-    padding: 10px 100px;
-    box-sizing: border-box;
-    background-color: pink;
-}
-.navItemsContainer {
-    display: grid;
-    grid-template-columns: 90% 10%;
-}
-.navItems {
-    display: flex;
-    justify-content: space-evenly;
-    list-style: none;
-} */
 /* Homepage Styling */
 .mainTitle {
     font-size: 50px;
@@ -72,12 +52,61 @@ video {
 }
 
 /* Lostitem Styling */
-.searchForm {
+.lostHeader {
+    text-align: center;
+}
+.nav {
+    display: flex;
+    justify-content: space-between;
+}
+.homeButton {
+    height: 25px;
+    width: 100px;
+    border-radius: 5px;
+    margin: 10px;
+}
+.aboutButton {
+    height: 25px;
+    width: 100px;
+    border-radius: 5px;
+    margin: 10px;
+}
+.listParent {
+    display: flex;
+    flex-flow: row wrap;
+    margin: 20px;
+}
+.lostForm {
     border: 2px black solid;
+    padding: 5px;
+    margin: 30px;
+    height: 300px;
+}
+.lostLocation {
+    width: 350px;
+}
+.listLostItems {
+    border: 2px solid black;
+    padding: 5px;
+    margin: 10px;
+    width: 342px;
+}
+.lostDescription {
+    width: 300px;
 }
 
 /* Founditem Styling */
-
+.editForm {
+    margin: 20px;
+}
+.foundTitle {
+    text-align: center;
+}
 /* Editpage Styling */
-
+.editDescription {
+    width: 300px;
+}
+.editLocation {
+    width: 340px;
+}
 /* Deletepage styling */

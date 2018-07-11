@@ -1,26 +1,42 @@
-<h1 class="lostTitle">Search For A Lost Item Below</h1>
-<form action="/searchpage" method="POST">
-    <input type="text" name="title" placeholder="Title">
-    <input type="text" name="description" placeholder="Description of Item">
-    <input type="date" name="date" id="">
-    <input type="time" name="time" id="">
-    <input type="text" name="location" id="" placeholder="Where did you find it?">
-    <input type="email" name="email" id="" placeholder="Email Address">
-    <input type="submit" name="search" value="Search">
-</form>
-<br class="lineBreak">
-
-{{#each items}}
-<p>
-    {{title}} | 
-    {{itemdescription}} |
-    {{datefound}} |
-    {{timefound}} |
-    {{locationfound}} |
-    {{email}}
-    <form action="" method="POST">
-        <a href="/{{itemid}}/editpage"><input type="button" name="edit" value="Edit"></a>
-        <a href="/{{itemid}}/deletepage"><i class="fas fa-trash-alt"></i></a>
-    </form>
-</p>
-{{/each}}
+<section class="lostMain">
+    <div class="nav">
+        <a href="/"><input type="button" value="Home" class="homeButton"></a>
+        <a href="#"><input type="button" value="About" class="aboutButton"></a>
+    </div>
+    <h1 class="lostHeader">Search For A Lost Item Below</h1>
+    <div class="lostForm">
+        <form action="/searchpage" method="POST">
+            <input type="text" name="title" placeholder="Title" class="lostTitle">
+            <input type="text" name="description" placeholder="Description of Item" class="lostDescription">
+            <input type="date" name="date" class="lostDate">
+            <input type="time" name="time" class="lostTime">
+            <input type="text" name="location" placeholder="Where did you find it?" class="lostLocation">
+            <input type="email" name="email" placeholder="Email Address" class="lostEmail">
+            <input type="submit" name="search" value="Search" class="lostSearch">
+        </form>
+    </div>
+    <br class="lineBreak">
+    <div class="listParent">
+    {{#each items}}
+        <div class="listLostItems">
+            <p>
+                Title: {{title}}
+                <br> 
+                Description: {{itemdescription}}
+                <br> 
+                Date Found: {{datefound}}
+                <br> 
+                Time Found: {{timefound}}
+                <br> 
+                Location: {{locationfound}}
+                <br> 
+                Email: {{email}}
+                <form action="" method="POST" class="listItemsButtons">
+                    <a href="/{{itemid}}/editpage"><input type="button" name="edit" value="Edit"></a>
+                    <a href="/{{itemid}}/deletepage"><i class="fas fa-trash-alt"></i></a>
+                </form>
+            </p>
+        </div>
+        {{/each}}
+    </div>
+</section>

@@ -1,9 +1,13 @@
-<form action="/{{itemid}}/editpage" method="POST">
-    <input type="text" name="title" value="{{title}}">
-    <input type="text" name="description" value="{{itemdescription}}">
-    <input type="date" name="date" id="" value="{{datefound}}">
-    <input type="time" name="time" id="" value="{{timefound}}">
-    <input type="text" name="location" id="" value="{{locationfound}}">
-    <input type="email" name="email" id="" value="{{email}}">
+<div class="nav">
+    <a href="/"><input type="button" value="Home" class="homeButton"></a>
+    <a href="#"><input type="button" value="About" class="aboutButton"></a>
+</div>
+<form action="/{{itemid}}/editpage" method="POST" class="editForm">
+    <input type="text" name="title" value="{{title}}" class="editTitle">
+    <input type="text" name="description" value="{{itemdescription}}" class="editDescription">
+    <input type="date" name="date" id="" value="{{datefound}}" class="editDate">
+    <input type="time" name="time" id="" value="{{timefound}}" class="editTime">
+    <input type="text" name="location" id="" value="{{locationfound}}" class="editLocation">
+    <input type="email" name="email" id="" value="{{email}}" class="editEmail">
     <input type="submit" name="submit">
 </form>
