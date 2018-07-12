@@ -57,7 +57,7 @@ function updateById(title, datefound, timefound, email, locationfound, itemdescr
         locationfound='$5#',
         imageurl='$8#',
         email='$4#'
-    Where itemid=$7`, [title, itemdescription, datefound, timefound, locationfound, email, itemid, imageurl]);
+    Where itemid=$7`, [title, datefound, timefound, email, locationfound, itemdescription, itemid, imageurl]);
 }
 
     // updateById('Iphone X', 'Iphone X 256gb Silver', '06/21/2018', '1:30 pm', '3323 Piedmont Rd NE, Atlanta, GA, 30324', 'atvPhone.com', 'atvtech@gmail.com', 1)
