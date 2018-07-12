@@ -3,17 +3,23 @@
         <a href="/"><input type="button" value="Home" class="homeButton"></a>
         <a href="#"><input type="button" value="About" class="aboutButton"></a>
     </div>
-    <h1 class="lostHeader">Search For A Lost Item Below</h1>
-    <div class="lostForm">
-        <form action="/searchpage" method="POST">
-            <input type="text" name="title" placeholder="Title" class="lostTitle">
-            <input type="text" name="description" placeholder="Description of Item" class="lostDescription">
-            <input type="date" name="date" class="lostDate">
-            <input type="time" name="time" class="lostTime">
-            <input type="text" name="location" placeholder="Where did you find it?" class="lostLocation">
-            <input type="email" name="email" placeholder="Email Address" class="lostEmail">
-            <input type="submit" name="search" value="Search" class="lostSearch">
-        </form>
+    <div class="container">
+        <div class="wrapper">
+            <div class="company-info">
+                <h1 class="lostHeader"><span>Search</span> For A Lost Item Below</h1>
+            </div>
+            <div class="contact">
+                <form action="/searchpage" method="POST">
+                    <input type="text" name="title" placeholder="Title">
+                    <input type="date" name="date" id="">
+                    <input type="time" name="time" id="">
+                    <input type="email" name="email" id="" placeholder="Email Address">
+                    <input type="text" name="location" id="" placeholder="Where did you find it?" class="full">
+                    <textarea name="description" rows="5" placeholder="Description of Item" class="full"></textarea>
+                    <input type="submit" name="submit" class="foundSubmit">
+                </form>
+            </div>
+        </div>
     </div>
     <br class="lineBreak">
     <div class="listParent">

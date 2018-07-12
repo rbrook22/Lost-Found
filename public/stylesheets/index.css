@@ -5,6 +5,12 @@ html, body {
     padding: 0;
     font-family: 'Josefin Sans', sans-serif;
 }
+body {
+    background: #92bde7;
+    color: #485e74;
+    line-height: 1.6;
+    padding: 1em;
+}
 /* Homepage Styling */
 .mainTitle {
     font-size: 50px;
@@ -96,11 +102,62 @@ video {
 }
 
 /* Founditem Styling */
+
+.container {
+    box-sizing: border-box;
+    max-width: 1170px;
+    margin-left: auto;
+    margin-right: auto;
+    padding: 1em;
+}
+.wrapper {
+    box-shadow: 0 0 20px 0 rgba(72, 94, 116, 0.7);
+}
+.wrapper > * {
+    padding: 1em;
+}
+.company-info {
+    background: #c9e6ff;
+}
+.company-info h1 {
+    text-align: center;
+}
+.contact {
+    background: #f9feff;
+}
+/* Form Styles */
+.contact form {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    grid-gap: 20px;
+}
+.contact form .full {
+    grid-column: 1/3;
+}
+.contact form .foundSubmit {
+    background: #c9e6ff;
+    border: 0;
+    text-transform: uppercase;
+    padding: 10px;
+    border-radius: 5px;
+}
+.contact form .foundSubmit, .contact form input, .contact form textarea {
+    border: 1px solid #c9e7ff;
+}
+.contact form .foundSubmit:hover, .contact form .foundSubmit:focus {
+    background: #92bde7;
+    color: #fff;
+    outline: 0;
+    transition: background-color 1s ease-out;
+}
 .editForm {
     margin: 20px;
 }
 .foundTitle {
     text-align: center;
+}
+.foundTitle span {
+    color: #fff;
 }
 /* Editpage Styling */
 .editDescription {

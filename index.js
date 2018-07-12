@@ -49,13 +49,13 @@ app.post('/foundItem', (req,res) => {
     // res.send("You submitted the form");
     console.log(req.body);
     console.log(req.body.title);
-    console.log(req.body.description);
     console.log(req.body.date);
     console.log(req.body.time);
-    console.log(req.body.location);
     console.log(req.body.email);
+    console.log(req.body.location);
+    console.log(req.body.description);
 
-    foundItem.addItem(req.body.title, req.body.description, req.body.date, req.body.time, req.body.location, req.body.email)
+    foundItem.addItem(req.body.title, req.body.date, req.body.time, req.body.email, req.body.location, req.body.description)
     .then((data) => {
         res.render('foundItem');
     })
@@ -73,19 +73,19 @@ app.get('/:itemid/editpage', (req, res) => {
 app.post('/:itemid/editpage', (req, res) => {
     console.log(req.body);
     console.log(req.body.title);
-    console.log(req.body.description);
     console.log(req.body.date);
     console.log(req.body.time);
-    console.log(req.body.location);
     console.log(req.body.email);
+    console.log(req.body.location);
+    console.log(req.body.description);
     
     foundItem.updateById(
         req.body.title,
-        req.body.description,
         req.body.date,
         req.body.time,
-        req.body.location,
         req.body.email,
+        req.body.location,
+        req.body.description,
         req.params.itemid)
     .then((data) => {
         console.log(data);

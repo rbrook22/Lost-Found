@@ -48,15 +48,15 @@ function deleteById(itemid) {
     //     .then((data) => {console.log(data); })
     //     .catch((error) => {console.log(error); });
 
-function updateById(title, itemdescription, datefound, timefound, locationfound, email, itemid, imageurl=" ") {
+function updateById(title, datefound, timefound, email, locationfound, itemdescription, itemid, imageurl=" ") {
     return db.result(`update foundformdata
     set title='$1#',  
-        itemdescription='$2#', 
-        datefound='$3#',
-        timefound='$4#', 
+        itemdescription='$6#', 
+        datefound='$2#',
+        timefound='$3#', 
         locationfound='$5#',
         imageurl='$8#',
-        email='$6#'
+        email='$4#'
     Where itemid=$7`, [title, itemdescription, datefound, timefound, locationfound, email, itemid, imageurl]);
 }
 
@@ -64,7 +64,7 @@ function updateById(title, itemdescription, datefound, timefound, locationfound,
     //     .then((data) => {console.log(data); })
     //     .catch((error) => {console.log(error); });
 
-    function addItem(title, itemdescription, datefound, timefound, locationfound, email, imageurl=" ") {
+    function addItem(title, datefound, timefound, email, locationfound, itemdescription, imageurl=" ") {
         return db.one(`INSERT INTO foundFormData
         (title, itemdescription, datefound, timefound, locationfound, imageurl, email)
     VALUES 
