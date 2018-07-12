@@ -25,23 +25,30 @@
     <div class="listParent">
     {{#each items}}
         <div class="listLostItems">
-            <p>
-                Title: {{title}}
-                <br> 
-                Date Found: {{datefound}}
-                <br> 
-                Time Found: {{timefound}}
-                <br> 
-                Email: {{email}}
-                <br>
-                Location: {{locationfound}}
-                <br> 
-                Description: {{itemdescription}}
-                <form action="" method="POST" class="listItemsButtons">
-                    <a href="/{{itemid}}/editpage"><input type="button" name="edit" value="Edit"></a>
-                    <a href="/{{itemid}}/deletepage"><i class="fas fa-trash-alt"></i></a>
-                </form>
-            </p>
+        <div class="container">
+            <div class="wrapper">
+                <p>
+                <div class="company-info">
+                <h1>Title: {{title}}</h1>
+                </div>
+                <div class="contact">
+                        Date Found: {{datefound}}
+                        <br> 
+                        Time Found: {{timefound}}
+                        <br> 
+                        Email: {{email}}
+                        <br>
+                        Location: {{locationfound}}
+                        <br> 
+                        Description: {{itemdescription}}
+                        <form action="" method="POST" class="listItemsButtons">
+                            <a href="/{{itemid}}/editpage"><input type="button" name="edit" value="Edit" class="lostEdit"></a>
+                            <a href="/{{itemid}}/deletepage"><i class="fas fa-trash-alt"></i></a>
+                        </form>
+                    </div>
+                </p>
+            </div>
+        </div>
         </div>
         {{/each}}
     </div>
