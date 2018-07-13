@@ -131,6 +131,12 @@ video {
     background: #f9feff;
 }
 /* Form Styles */
+.homeButton {
+    cursor: pointer;
+}
+.aboutButton {
+    cursor: pointer;
+}
 .contact form {
     display: grid;
     grid-template-columns: 1fr 1fr;
