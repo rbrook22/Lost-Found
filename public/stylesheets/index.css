@@ -95,6 +95,7 @@ video {
     background: #c9e6ff;
     padding: 10px;
     width: 90%;
+    cursor: pointer;
 }
 .listItemsButtons {
     margin: 20px 0;
@@ -148,6 +149,7 @@ video {
     padding: 10px;
     border-radius: 5px;
     grid-column: 1/3;
+    cursor: pointer;
 }
 .contact form .noSubmit {
     grid-column: 1/3;
