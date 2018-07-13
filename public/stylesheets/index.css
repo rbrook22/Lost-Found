@@ -99,6 +99,10 @@ video {
 .listItemsButtons {
     margin: 20px 0;
 }
+.listItemsButtons .trashCan {
+    display: flex;
+    justify-content: center;
+}
 .fas {
     font-size: 30px;
 }
@@ -143,6 +147,10 @@ video {
     text-transform: uppercase;
     padding: 10px;
     border-radius: 5px;
+    grid-column: 1/3;
+}
+.contact form .noSubmit {
+    grid-column: 1/3;
 }
 .contact form .foundSubmit, .contact form input, .contact form textarea {
     border: 1px solid #c9e7ff;
@@ -153,6 +161,7 @@ video {
     outline: 0;
     transition: background-color 1s ease-out;
 }
+
 .editForm {
     margin: 20px;
 }

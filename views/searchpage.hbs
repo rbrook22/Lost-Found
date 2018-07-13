@@ -15,8 +15,8 @@
                 <input type="time" name="time" value="{{timefound}}">
                 <input type="email" name="email" value="{{email}}">
                 <input type="text" name="location" value="{{locationfound}}" class="full">
-                <textarea name="description" rows="5" value="{{itemdescription}}" class="full"></textarea>
-                <a href="/{{itemid}}/editpage"><input type="button" name="edit" value="Edit" class="foundSubmit"></a>
+                <textarea name="description" rows="5" class="full">{{itemdescription}}</textarea>
+                <a href="/{{itemid}}/editpage" class="full"><input type="button" name="edit" value="Edit" class="foundSubmit"></a>
             </form>
         </div>
     {{/each}}
