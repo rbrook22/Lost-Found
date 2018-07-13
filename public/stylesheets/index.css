@@ -171,4 +171,48 @@ video {
 .foundTitle span {
     color: #fff;
 }
+.aboutHeader {
+    text-align: center;
+    margin-top: 50px;
+}
+.imgContainer {
+    display: flex;
+    justify-content: center;
+}
+.img {
+    display: flex;
+    justify-content: center;
+    background-image: url("/imgs/me.jpg");
+    background-size: contain;
+    background-repeat: no-repeat;
+    height: 200px;
+    width: 200px;
+    position: relative;
+    border-radius: 50%;
+    align-self: center;
+    cursor: pointer;
+}
+.img:hover .imgOverlay{
+    width: 200px;
+}
+.imgOverlay {
+    width: 0px;
+    height: 200px;
+    background: rgba(146, 189, 231, .8);
+    position: absolute;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    overflow: hidden;
+    transition: 0.7s ease;
+}
+.imgOverlay input {
+    border-radius: 5px;
+    font-size: 20px;
+    margin: 5px;
+    color: white;
+    height: 30px;
+    background:rgba(72, 94, 116, 0.7);
+    cursor: pointer;
+}
 
