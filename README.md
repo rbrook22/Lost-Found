@@ -1,7 +1,7 @@
 # Trace & Find
 
 
-## <a href="http://18.222.139.156/"> Live Demo <a>
+## <a href="http://www.traceandfind.co/"> Live Demo <a>
 
 ## Team Members
 * <a href="https://github.com/rbrook22"> Rick Brooks </a>
